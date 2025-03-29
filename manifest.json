@@ -3,13 +3,19 @@
   "name": "LifeHub",
   "version": "1.0",
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "128": "images/icon128.png"
-    }
+    "default_title": "Click to open panel"
   },
   "side_panel": {
     "default_path": "sidepanel.html"
   },
-  "permissions": ["activeTab"]
+  "content_scripts": [
+    {
+      "js": ["content-script.js"],
+      "matches": ["https://www.google.com/*"]
+    }
+  ],
+  "permissions": ["side_panel", "contextMenus"],
+  "background": {
+    "service_worker": "service_worker.js"
+  }
 }
