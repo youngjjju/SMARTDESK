@@ -1,0 +1,18 @@
+/* sidepanel.css */
+
+:root {
+    --primary-color: #475569;
+    --secondary-color: #64748B;
+    --third-color:#CBD5E1;
+    --background-color:#F8FAFC;
+    --text-color: #1E293B;
+}
+
+body {
+  font-family: 'Inter', sans-serif; 
+  background-color: var(--background-color);
+}
+
+.sidepanel {
+  font-family: 'Inter', sans-serif;
+}
