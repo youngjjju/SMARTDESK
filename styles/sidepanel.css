@@ -5,12 +5,24 @@
     --secondary-color: #64748B;
     --third-color:#CBD5E1;
     --background-color:#F8FAFC;
-    --text-color: #1E293B;
+    --text-color-dark: #F8FAFC;
+    --text-color-light: #1E293B;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Inter", sans-serif;
-  width: 98%;
-  height:100vh;
+  width: 97%;
+  height:98vh;
   background-color: var(--background-color);
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  background: #475569;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
 }
