@@ -4,7 +4,8 @@
     --primary-color: #475569;
     --secondary-color: #64748B;
     --third-color:#CBD5E1;
-    --background-color:#F8FAFC;
+    --background-color:#F2F3F5;
+    --block-color:white;
     --text-color-dark: #F8FAFC;
     --text-color-light: #1E293B;
 }
@@ -18,11 +19,107 @@ body {
   background-color: var(--background-color);
 }
 
+/* header */
+
 .header {
   display: flex;
+  align-items: center;
   width: 100%;
   height: 55px;
-  background: #475569;
-  border-top-left-radius: 22px;
-  border-top-right-radius: 22px;
+  background: var(--primary-color);
+  border-radius: 22px;
+}
+
+.headerText {
+  font-size: large;
+  color: white;
+}
+
+.headerLogo{
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.headerRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.loginBar {
+  width: 80px;
+  height: 30px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  margin-right: 25px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: 500;
+  color: var(--text-color-light);
+}
+
+/* field */
+
+.field {
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+}
+
+.field > * {
+  border-radius: 12px;
+}
+
+.fieldFirstRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  gap: 2%;
+}
+
+.fieldFirstRow > * {
+  width: 32%;
+  height: 150px;
+  background-color: var(--block-color);
+  border-radius: 12px;
+}
+
+.time {
+ 
+}
+
+.weather {
+  
+}
+.memoBookmark {
+  
+}
+
+.calendar {
+  width: 100%;
+  height: 100%;
+  background-color: var(--block-color);
+}
+
+.youtube {
+  width: 100%;
+  height: 150px;
+  background-color: var(--block-color);
+}
+
+.ai {
+  width: 100%;
+  height: 150px;
+  background-color: var(--block-color);
 }
