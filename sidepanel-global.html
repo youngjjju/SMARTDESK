@@ -8,10 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="clock/clockStyle.css">
 </head>
 <body>
     <div class="header">
-        <img class="headerLogo" src="images/logo.png" alt="logo" width="35" height="35"/>
+        <img class="headerLogo" src="images/logo.png" alt="logo" width="35" height="35" />
         <h1 class="headerText">SMARTDESK</h1>
         <div class="headerRight">
             <img src="images/configuration.svg" width="25" height="25" alt="configuration" />
@@ -22,7 +24,7 @@
     <div class="field">
         <div class="fieldFirstRow">
             <div class="time">
-                fetch()
+               <my-clock></my-clock>
             </div>
             <div class="weather"></div>
             <div class="memoBookmark"></div>
@@ -31,5 +33,7 @@
         <div class="youtube"></div>
         <div class="ai"></div>
     </div>
-    </body>
+</body>
+ <script type="module" src="clock/index.js" defer></script>
+ <script src="clock/clockFunction.js" defer></script> 
 </html>
