@@ -35,21 +35,17 @@
   --z-tooltip: 10;
 }
 
-@media screen and (min-width: 968px) {
+@media screen and (min-width:900px) {
   :root {
     --biggest-font-size: 3.5rem;
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
     --tiny-font-size: .75rem;
   }
+
 }
 
-/*========== Variables Dark theme ==========*/
-body.dark-theme {
-  --title-color: hsl(var(--hue-color), 12%, 95%);
-  --text-color: hsl(var(--hue-color), 12%, 75%);
-  --body-color: hsl(var(--hue-color), 10%, 16%);
-}
+
 
 /*========== Button Dark/Light ==========*/
 .clock__theme {
@@ -66,19 +62,6 @@ body.dark-theme {
   transition: .4s; 
 }
 
-/*========== Box shadow Dark theme ==========*/
-.dark-theme .clock__circle {
-  box-shadow: 6px 6px 16px hsla(var(--hue-color), 8%, 12%, 1), 
-              -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1), 
-              inset -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1), 
-              inset 6px 6px 12px hsla(var(--hue-color), 8%, 12%, 1);
-}
-
-.dark-theme .clock__theme {
-  box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 8%, 20%, 1), 
-              inset 1px 1px 1px hsla(var(--hue-color), 8%, 12%, 1);
-}
-
 /*=============== BASE ===============*/
 
 a {
@@ -92,7 +75,15 @@ height: 100%;
 }
 
 .grid {
-  display: grid;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+@media screen and (min-width:900px) {
+  .grid {
+    flex-direction: row;
+  }
 }
 
 /*=============== CLOCK ===============*/
@@ -104,8 +95,8 @@ height: 100%;
 
 .clock__circle {
   position: relative;
-  width: 78%;
-  height: 500%;
+  width: 93px;
+  height: 93px;
   box-shadow: -6px -6px 16px var(--white-color), 
               6px 6px 16px hsla(var(--hue-color), 30%, 86%, 1), 
               inset 6px 6px 16px hsla(var(--hue-color), 30%, 86%, 1), 
@@ -119,8 +110,14 @@ height: 100%;
 }
 
 .clock__content {
-  align-self: center;
-  gap: 5rem;
+  align-self:center;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width:900px) {
+  .clock__content {
+    gap: 1rem;
+  }
 }
 
 .clock__twelve, 
@@ -191,8 +188,8 @@ height: 100%;
 }
 
 .clock__minutes {
-  width: 136px;
-  height: 100px;
+  width: 60px;
+  height: 90px;
 }
 
 .clock__minutes::before {
@@ -253,11 +250,7 @@ height: 100%;
   margin-left: var(--mb-0-25);
 }
 
-.clock__date {
-  text-align: center;
-  font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
-}
+
 
 /*=============== MEDIA QUERIES ===============*/
 /* For large devices */
