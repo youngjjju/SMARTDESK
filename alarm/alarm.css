@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #475569;
+    --secondary-color: #64748B;
+    --third-color:#CBD5E1;
+    --background-color:#F2F3F5;
+    --block-color:white;
+    --text-color-dark: #F8FAFC;
+    --text-color-light: #1E293B;
+}
+
+.alarm {
+    height: 100%;
+    padding-left: 12px;
+    position: relative;
+}
+
+.alarmTitle {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--text-color-light);
+    font-size: 1rem;
+    border-radius: 12px;
+    padding-top: 8px;
+    font-weight: 700;
+}
+
+.addAlarmButton {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 15px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-color-light);
+    font-weight: 500;
+}

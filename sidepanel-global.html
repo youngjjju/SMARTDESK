@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- 필요한지 모르겠음 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> -->
     <link rel="stylesheet" href="clock/clockStyle.css">
+    <link rel="stylesheet" href="weather/weather.css">
+    <link rel="stylesheet" href="alarm/alarm.css">
 </head>
 <body>
     <div class="header">
@@ -24,16 +26,71 @@
     <div class="field">
         <div class="fieldFirstRow">
             <div class="time">
-               <my-clock></my-clock>
+                <section class="clock container">
+                    <div class="clock__container grid">
+                        <div class="clock__content grid">
+                            <div class="clock__circle">
+                                <span class="clock__twelve"></span>
+                                <span class="clock__three"></span>
+                                <span class="clock__six"></span>
+                                <span class="clock__nine"></span>
+                                <div class="clock__rounder"></div>
+                                <div class="clock__hour" id="clock-hour"></div>
+                                <div class="clock__minutes" id="clock-minutes"></div>
+                                <div class="clock__seconds" id="clock-seconds"></div>
+                            </div>
+                            <div>
+                                <div class="clock__text">
+                                    <div class="clock__text-hour" id="text-hour"></div>
+                                    <div class="clock__text-minutes" id="text-minutes"></div>
+                                    <div class="clock__text-ampm" id="text-ampm"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="weather"></div>
-            <div class="memoBookmark"></div>
+            <div class="weather">
+                <img src="images/weather/Sunny.svg" class="weatherImg" width="100" height="100"></img>
+                <div class="weatherInfo">
+                    <span class="weatherDegree">13</span>
+                    <span class="weatherUnit">°C | °F</span>
+                </div>
+            </div>
+            <div class="alarm">
+                <div class="alarmTitle">ALARMS</div>
+                <div class="alarmList"></div>
+                <div class="addAlarmButton">
+                   + Add Alarm
+                </div>
+            </div>
+
         </div>
         <div class="calendar"></div>
         <div class="youtube"></div>
         <div class="ai"></div>
     </div>
+    <script src="clock/clockFunction.js" defer></script>
+    <script>
+        const alarms = [
+            {
+                time: "08:00",
+                description: "Wake up",
+            },
+            {
+                time: "12:00",
+                description: "Call to Ella",
+            }
+        ];
+        const alarmsHTML = alarms.map(
+            (alarms) => `
+                <div>
+                    <span>${alarms.time}</span>
+                    <span>${alarms.description}</span>
+                </div>
+            `
+        ).join('');
+        document.querySelector(".alarmList").innerHTML = alarmsHTML;
+    </script>
 </body>
- <script type="module" src="clock/index.js" defer></script>
- <script src="clock/clockFunction.js" defer></script> 
 </html>

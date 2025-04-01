@@ -1,0 +1,58 @@
+:root {
+    --primary-color: #475569;
+    --secondary-color: #64748B;
+    --third-color:#CBD5E1;
+    --background-color:#F2F3F5;
+    --block-color:white;
+    --text-color-dark: #F8FAFC;
+    --text-color-light: #1E293B;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherInfo {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width:900px) {
+    .weather {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .weatherImg {
+        width: 145px;
+        height: 145px;
+    }
+
+    .weatherInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+}
+
+.weatherDegree {
+    font-size: 2.5rem;
+    font-weight:900;
+    color: var(--text-color-light);
+}
+
+@media screen and (min-width:900px) {
+    .weatherDegree {
+        font-size: 3.2rem;
+    }
+}
+
+.weatherUnit {
+    font-size: 0.8rem;
+    font-weight: 900;;
+}

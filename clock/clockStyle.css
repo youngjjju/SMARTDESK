@@ -1,5 +1,14 @@
 
-    /*=============== GOOGLE FONTS ===============*/
+:root {
+    --primary-color: #475569;
+    --secondary-color: #64748B;
+    --third-color:#CBD5E1;
+    --background-color:#F2F3F5;
+    --block-color:white;
+    --text-color-dark: #F8FAFC;
+    --text-color-light: #1E293B;
+}
+/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
@@ -55,8 +64,6 @@
   display: flex;
   padding: .25rem;
   border-radius: 50%;
-  box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 0%, 100%, 1), 
-              inset 1px 1px 1px hsla(var(--hue-color), 30%, 86%, 1);
   color: var(--first-color);
   cursor: pointer;
   transition: .4s; 
@@ -157,7 +164,7 @@ align-items: center;
 
 .clock__rounder {
   width: .30rem;
-  height: .75rem;
+  height: .30rem;
   background-color: var(--first-color);
   border-radius: 50%;
   border: 2px solid var(--body-color);
@@ -174,7 +181,7 @@ align-items: center;
 
 .clock__hour {
   width: 105px;
-  height: 90px;
+  height: 70px;
 }
 
 .clock__hour::before {
@@ -182,28 +189,28 @@ align-items: center;
   position: absolute;
   background-color: var(--text-color);
   width: .25rem;
-  height: 3rem;
-  border-radius: .75rem;
+  height: 2rem;
+  border-radius: .5rem;
   z-index: var(--z-normal);
 }
 
 .clock__minutes {
   width: 60px;
-  height: 90px;
+  height: 85px;
 }
 
 .clock__minutes::before {
   content: '';
   position: absolute;
   background-color: var(--text-color);
-  width: .25rem;
-  height: 4rem;
-  border-radius: .75rem;
+  width: .20rem;
+  height: 3rem;
+  border-radius: .5rem;
   z-index: var(--z-normal);
 }
 
 .clock__seconds {
-  width: 130px;
+  width: 10px;
   height: 15px;
 }
 
@@ -212,7 +219,7 @@ align-items: center;
   position: absolute;
   background-color: var(--first-color);
   width: .125rem;
-  height: 4rem;
+  height: 3rem;
   border-radius: .75rem;
   z-index: var(--z-normal);
 }
@@ -239,18 +246,16 @@ align-items: center;
 .clock__text-hour, 
 .clock__text-minutes {
   font-size: var(--biggest-font-size);
-  font-weight: var(--font-medium);
-  color: var(--title-color);
+  font-weight:900;
+  color:var(--text-color-light);
 }
 
 .clock__text-ampm {
   font-size: var(--tiny-font-size);
-  color: var(--title-color);
-  font-weight: var(--font-medium);
+  color: var(--text-color-light);
+  font-weight: 900;
   margin-left: var(--mb-0-25);
 }
-
-
 
 /*=============== MEDIA QUERIES ===============*/
 /* For large devices */
