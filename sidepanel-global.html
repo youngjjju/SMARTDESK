@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- 필요한지 모르겠음 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> -->
-    <link rel="stylesheet" href="clock/clockStyle.css">
+    <link rel="stylesheet" href="time/timeStyle.css">
     <link rel="stylesheet" href="weather/weather.css">
     <link rel="stylesheet" href="alarm/alarm.css">
 </head>
@@ -26,7 +26,7 @@
     <div class="field">
         <div class="fieldFirstRow">
             <div class="time">
-                <section class="clock container">
+                <section class="clock container" >
                     <div class="clock__container grid">
                         <div class="clock__content grid">
                             <div class="clock__circle">
@@ -69,28 +69,44 @@
         <div class="calendar"></div>
         <div class="youtube"></div>
         <div class="ai"></div>
+    </div>  
+    <!-- modal-time -->
+    <div class="modal-time-container modal-time-hidden" id="modal-time">
+        <div class="modal-time">
+            <div class="modal-time-content">
+                <span class="modal-time-close">
+                    <img width="20" height="20" src="images/x.svg"/>
+                </span>
+                <div class="modal-time-body"></div>
+            </div>
+        </div>
     </div>
-    <script src="clock/clockFunction.js" defer></script>
-    <script>
-        const alarms = [
-            {
-                time: "08:00",
-                description: "Wake up",
-            },
-            {
-                time: "12:00",
-                description: "Call to Ella",
-            }
-        ];
-        const alarmsHTML = alarms.map(
-            (alarms) => `
-                <div>
-                    <span>${alarms.time}</span>
-                    <span>${alarms.description}</span>
-                </div>
-            `
-        ).join('');
-        document.querySelector(".alarmList").innerHTML = alarmsHTML;
-    </script>
+    <!-- modal-weather -->
+    <div class="modal-weather-container modal-weather-hidden" id="modal-weather">
+        <div class="modal-weather">
+            <div class="modal-weather-content">
+                <span class="modal-weather-close">
+                    <img width="20" height="20" src="images/x.svg"/>
+                </span>
+                <div class="modal-weather-body"></div>
+            </div>
+        </div>
+    </div> 
+    <!-- modal-alarm -->
+    <div class="modal-alarm-container modal-alarm-hidden" id="modal-alarm">
+        <div class="modal-alarm">
+            <div class="modal-alarm-content">
+                <span class="modal-alarm-close">
+                    <img width="20" height="20" src="images/x.svg"/>
+                </span>
+                <div class="modal-alarm-body"></div>
+            </div>
+        </div>
+    </div>       
+    <script src="time/timeFunction.js" defer></script>
+    <script src="time/modalTimeShowing.js" defer></script>
+    <script src="weather/modalWeatherShowing.js" defer></script>
+    <script src="alarm/modalAlarmShowing.js" defer></script>
+    <script src="alarm/alarmTimesMapping.js" defer></script>
 </body>
 </html>
