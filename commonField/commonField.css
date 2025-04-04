@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #475569;
+    --secondary-color: #64748B;
+    --third-color:#CBD5E1;
+    --background-color:#F2F3F5;
+    --block-color:white;
+    --text-color-dark: #F8FAFC;
+    --text-color-light: #1E293B;
+}
+
+/*=============== CommonField ===============*/
+
+.commonFieldMenubar {
+    width: 100%;
+    height: 45px;
+    background-color: var(--third-color);
+    display: flex;
+    border-radius: 12px;
+}
+
+.commonFieldMenubarTitle {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commonFieldArea {
+    width: 100%;
+    height: calc(100% - 45px);
+    border-radius: 12px;
+}
+
+.commonFieldCalendar {
+    width: 100%;
+    height: 100%;
+}
+
+.commonFieldCalendar.commonFieldCalendar-hidden {
+    display: none;
+}
+
+.commonFieldMemo{
+    width: 100%;
+    height: 100%;
+}
+
+.commonFieldMemo.commonFieldMemo-hidden {
+    display: none;
+}
+
+.commonFieldBookmark {
+    width: 100%;
+    height: 100%;
+}
+
+.commonFieldBookmark.commonFieldBookmark-hidden {
+    display: none;
+}
