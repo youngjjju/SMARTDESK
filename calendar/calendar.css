@@ -1,0 +1,22 @@
+
+  #calendar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 5px;
+    height: 100%;
+    width: 100%;
+  }
+  
+.fc-direction-ltr .fc-daygrid-event .fc-event-time {
+    margin-right: 3px;
+    display: none;
+}
+
+.fc-direction-ltr {
+    direction: ltr;
+    text-align: center;
+}
+
+.fc .fc-view-harness {
+    background-color: white;
+}

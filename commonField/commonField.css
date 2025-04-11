@@ -28,7 +28,7 @@
 
 .commonFieldArea {
     width: 100%;
-    height: calc(100% - 45px);
+    height: 100%;
     border-radius: 12px;
 }
 

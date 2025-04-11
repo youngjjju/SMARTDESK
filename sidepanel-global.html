@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="weather/weather.css">
     <link rel="stylesheet" href="alarm/alarm.css">
     <link rel="stylesheet" href="commonField/commonField.css">
+    <link rel="stylesheet" href="calendar/calendar.css">
 </head>
 <body>
     <div class="header">
@@ -68,18 +69,17 @@
 
         </div>
         <div class="commonField">
-            <div class="commonFieldMenubar">
-                <div class="commonFieldMenubarTitle" id="calenderOn">CALENDAR</div>
-                <div class="commonFieldMenubarTitle" id="memoOn">MEMO</div>
-                <div class="commonFieldMenubarTitle" id="bookmarkOn">BOOKMARK</div>
-            </div>
+       
             <div class="commonFieldArea">
-                <div class="commonFieldCalendar ">캘린더</div>
+                <div class="commonFieldCalendar ">
+                    
+                    <div id='calendar'></div>
+
+                </div>
                 <div class="commonFieldMemo commonFieldMemo-hidden">메모</div>
                 <div class="commonFieldBookmark commonFieldBookmark-hidden">북마크</div>
             </div>           
         </div>
-        <div class="ai"></div>
         
     </div>  
     <!-- modal-time -->
@@ -121,5 +121,7 @@
     <script src="alarm/modalAlarmShowing.js" defer></script>
     <script src="alarm/alarmTimesMapping.js" defer></script>
     <script src="commonField/commonFieldShowing.js" defer></script>
+    <script src="calendar/calendar.js " defer></script>
+    <script src='calendar/index.global.js'></script>
 </body>
 </html>
