@@ -1,1 +1,1 @@
-SMARTDESK is a chrome extension that provide assorted functions for users. 
+SMARTDESK is a chrome extension that provides assorted functions for users. 
